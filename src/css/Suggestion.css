@@ -1,0 +1,203 @@
+.sugg-list {
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: #e5eeeb;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+.Linkp{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    color: black;
+}
+.h1 {
+    font-family: 'Bai jamjuree';
+    font-size: 100;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.show{
+    position: relative;
+    margin-bottom: 3px;
+    margin-top: -35px;
+    color: rgb(12, 146, 12);
+    color: rgb(2, 14, 0);
+    font-family: 'Bai jamjuree';
+    font-size: 22px;
+    font-weight: 700;
+}
+.list {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+}
+
+.list::-webkit-scrollbar {
+    width: 10;
+}
+
+.list-element {
+    width: 168px;
+    min-width: 168px;
+    background-color: white;
+    height: 265px;
+    border-radius: 5px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    color:black
+
+}
+
+.list-element-img {
+    width: 70%;
+    margin-top: 17px;
+    border-radius: 10px;
+}
+
+.item-name {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+}
+.price{
+    font-weight: 900;
+    font-family: 'Bai jamjuree';
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    
+}
+.addbutton {
+    border: 0;
+    width: 98%;
+}
+
+#chevron {
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 60px;
+    width: 97%;
+    border: 0;
+    background: none;
+}
+
+.add-buttton{
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 60px;
+    width: 97%;
+    border: 0;
+    background: none;
+    
+}
+
+#chevron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: #c8c8c8;
+    transform: skew(0deg, 6deg);
+    border-radius: 0 3px 0 5px;
+    
+    padding-top:-3px;
+    padding-right:35px;
+    font-size: 20px;
+    font-family: 'Bai jamjuree';
+}
+.chevron-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: #c8c8c8;
+    transform: skew(0deg, 6deg);
+    border-radius: 0 3px 0 5px;
+    
+    padding-top:-3px;
+    padding-right:35px;
+    font-size: 20px;
+    font-family: 'Bai jamjuree';
+    background: #82d561;
+}
+.chevron-left:hover{
+    background: #da6666;
+}
+
+
+#chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #c8c8c8;
+    transform: skew(0deg, -6deg);
+    border-radius: 0 3px 5px 0;
+    
+    padding-top:-3px;
+    padding-left:35px;
+    font-size: 20px;
+    font-family: 'Bai jamjuree';
+}
+.chevron-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: #c8c8c8;
+    transform: skew(0deg, -6deg);
+    border-radius: 0 3px 5px 0;
+    padding-top:-3px;
+    padding-left:35px;
+    font-size: 20px;
+    font-family: 'Bai jamjuree';
+    background: #82d561;
+}
+.chevron-right:hover{
+    background: #50a548;
+}
+#chevron:hover:after{
+    background: #82d561;
+}
+#chevron:hover:before{
+    background: #82d561;
+}
+
+@media only screen and (max-width: 500px){
+
+
+.h1 {
+    font-family: 'Bai jamjuree';
+    
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+
+
+
+}

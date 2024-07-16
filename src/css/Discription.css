@@ -1,0 +1,64 @@
+.flex{
+    display: flex;
+    flex-direction: column;
+    max-width: 53%;
+    min-width: 53%;
+    width: 53%;
+}
+.dsc-p{
+    color: gray;
+    font-family:'Courier New', Courier, monospace;
+}
+.price-text{
+    color: rgb(100, 100, 58);
+    font-family:'Fredoka One';
+    color: black;
+}
+
+.btn-warning{
+    height: 40px;
+    width: 110px;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.h1{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 2px;
+    
+}
+.h2{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 2px;
+    margin-top: 20px;
+    
+    background: rgb(6 75 78);
+    color: white;
+    padding-left: 10px;
+    
+}
+.h1 >h6{
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 900px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+    }
+    .h2{
+        background: rgb(33, 180, 77);
+        /* background: rgb(77, 190, 83); */
+        color: black;
+        padding-left: 0px;
+    }
+}
+@media only screen and (max-width: 500px){
+    
+    
+}

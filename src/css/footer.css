@@ -1,0 +1,121 @@
+.footer{
+    width: 100%;
+    min-height: 100px;
+    background: black;
+    display: flex;
+    flex-direction: row;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 70px;
+    margin-left: 40px;
+    width: 30%;
+    margin-right: 10px;
+    
+
+
+}
+.input-text{
+    margin:5px;
+    width: 100%;
+    height: 43px;
+    border: 0;
+    border-radius: 9px;
+    padding: 10px;
+}
+.textarea{
+    margin: 5px;
+    width: 100%;
+    min-height: 120px;
+    border: 0;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.footer-right{  
+    width: 70%;
+    padding-top: 100px;
+    padding-left: 70px;
+}
+.footer-right > h1{
+    color: rgb(199, 142, 58);
+
+}
+a{
+    color: white;
+}
+
+.bbox{
+    display: flex;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    color: rgb(206, 206, 206);
+    padding-left: 10px;
+    padding-top: 30px;
+    width: 100%;
+}
+.lower-text{
+    color: rgb(206, 206, 206);
+}
+.color{
+    color:gray
+}
+.green{
+    color:green;
+}
+
+.lowest{
+    background: rgb(26, 26, 26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(206, 206, 206);
+}
+
+@media only screen and (max-width: 800px) {
+    
+
+    .footer{
+        flex-direction: column;
+
+    }
+    .contact{
+        width: 90%;
+        margin-left: 5%;
+        color: rgb(199, 142, 58);
+        padding: 5px;
+    }
+    .footer-right{
+        width: 90%;
+        margin-left: 5%;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .input-text{
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+        height: 43px;
+        border: 0;
+        border-radius: 9px;
+        padding: 10px;
+    }
+    .textarea{
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;
+        min-height: 120px;
+        border: 0;
+        border-radius: 9px;
+        padding: 10px;
+    }
+    .h11{
+        margin-left: -5px;
+    }
+}
