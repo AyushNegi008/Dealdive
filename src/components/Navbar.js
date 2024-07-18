@@ -39,16 +39,16 @@ export default function Navbar(props) {
         </div>
         <div className={navStatus}>
 
-          <Link to="scan" className='onel'> 
+          <Link to="scan" className='onel' onClick={()=>{setNavStatus("d-dis")}}> 
             <img className='more-img' src={scanw}></img>
             <div className='more-text'>scan</div>
           </Link>
-          <Link to="chatbot" className='onel'>
+          <Link to="chatbot" className='onel' onClick={()=>{setNavStatus("d-dis")}}>
             <img className='more-img' src={botw}></img>
             <div className='more-text'>chatbot</div>
           </Link>
           
-          <Link to="orders" className='onel'>
+          <Link to="orders" className='onel' onClick={()=>{setNavStatus("d-dis")}}>
             <img className='more-img' src={orderw}></img>
             <div className='more-text'>orders</div>
           </Link>

@@ -3,10 +3,54 @@ import { Link } from 'react-router-dom';
 import '../css/Suggestion.css';
 import '../css/dproduct.css';
 import '../css/cproduct.css';
-import productList from '../static/data/products.js';
+// import productList from '../static/data/products.js';
 import cart from '../static/data/cart.js';
 
-export default function cproduct() {
+
+
+import axios from 'axios';
+import { useEffect } from 'react';
+import { useState } from 'react';
+
+
+export default function Cproduct() {
+
+
+
+    const [productList, setProductList] = useState([]);
+
+    const addtoarray = async(response) => {
+        await setProductList(response)
+    }
+
+    const url="http://192.168.1.22/dealdive/php-server/cproduct.php"
+
+    const fetch=()=>{
+    axios.request(url)
+    .then(response=> addtoarray(response.data , productList))
+    .catch(error=> alert(error));
+    }
+  
+    
+  
+    useEffect(() => {
+      fetch();
+      
+      const databaseChangeListener = () => {
+        
+        setTimeout(fetch, 0); 
+      };
+      const interval = setInterval(databaseChangeListener, 10000);
+  
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+
+
+
+
+
   return (
     <>
         <div className='sugg-list'>
@@ -14,18 +58,33 @@ export default function cproduct() {
                 choose category
             </h1>
             <div className='cet-list'>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn select'>fruits</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
-                <div className='chooise-btn'>vege</div>
+                <div className='chooise-btn select'>Fruits</div>
+                <div className='chooise-btn'>Poultry</div>
+                <div className='chooise-btn'>Vegetables</div>
+                <div className='chooise-btn'>Bakery</div>
+                <div className='chooise-btn'>Dairy</div>
+                <div className='chooise-btn'>Grains</div>
+                <div className='chooise-btn'>Beverages</div>
+                <div className='chooise-btn'>Meat</div>
+                <div className='chooise-btn'>Pasta</div>
+                <div className='chooise-btn'>Seafood</div>
+                <div className='chooise-btn'>Breakfast</div>
+                <div className='chooise-btn'>Baking</div>
+                <div className='chooise-btn'>Spices</div>
+                <div className='chooise-btn'>Cooking Oils</div>
+                <div className='chooise-btn'>Condiments</div>
+                <div className='chooise-btn'>Sweeteners</div>
+                <div className='chooise-btn'>Spreads</div>
+                <div className='chooise-btn'>Nuts</div>
+                <div className='chooise-btn'>Dried Fruits</div>
+                <div className='chooise-btn'>Sweets</div>
+                <div className='chooise-btn'>Canned Goods</div>
+                <div className='chooise-btn'>Pulses</div>
+                <div className='chooise-btn'>Herbs & Spices</div>
+                
+
+
+
                 
             </div>
 
@@ -39,7 +98,7 @@ export default function cproduct() {
                             
 
                             
-                            product.cetegeory=="fruit"
+                            product.cetegeory=="Fruits"
                             ?
                             <div key={product.pid} className='list-element no-margin'>
                                 <Link className="Linkp" to={"/productpage/"+product.pid}>

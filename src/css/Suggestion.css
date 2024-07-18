@@ -62,8 +62,10 @@
 
 .list-element-img {
     width: 70%;
+    aspect-ratio: 1;
     margin-top: 17px;
     border-radius: 10px;
+    object-fit: contain;
 }
 
 .item-name {

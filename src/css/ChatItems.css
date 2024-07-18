@@ -1,0 +1,86 @@
+.item-list-box {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 50px;
+}
+.item-listm{
+    width: 46%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 50px;
+    background: #ffebeb;
+    background: #ebffeb;
+    border-radius: 15px;
+    
+}
+.Item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.Item > img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+}
+.countcontain{
+    display: flex;
+    width: 140px;
+    height:28px;
+    justify-content: space-between;
+    border-radius: 5px;
+    /* border: 1px solid; */
+    padding: 0;
+    overflow: hidden;
+    background: green;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+.cbtnm{
+    width: 33%;
+    height: 100%;
+    border: 0;
+}
+.countp{
+    background: #1ba85b;
+    background: none;
+    color: white;
+}
+.countp:active{
+    background: #1ba85b;
+}
+.countm{
+    background: #d5472f;
+    background: none;
+    color: rgb(255, 255, 255);
+}
+.countm:active{
+    background: #d5472f;
+}
+.detail{
+    width:100%;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width:800px){
+    .item-listm{
+        width: 90%;
+        
+
+    }
+    .Item > .itemimgm{
+        width: 65px;
+        height: 65px;
+        
+    }
+}

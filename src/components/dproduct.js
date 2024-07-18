@@ -2,10 +2,51 @@ import React from 'react'
 import {Link } from 'react-router-dom';
 import '../css/Suggestion.css';
 import '../css/dproduct.css';
-import productList from '../static/data/products.js';
+// import productList from '../static/data/products.js';
 import cart from '../static/data/cart.js';
 
-export default function dproduct() {
+
+
+import axios from 'axios';
+import { useEffect } from 'react';
+import { useState } from 'react';
+
+
+export default function Dproduct() {
+
+    const [productList, setProductList] = useState([]);
+
+    const addtoarray = async(response) => {
+        await setProductList(response)
+    }
+
+    const url="http://192.168.1.22/dealdive/php-server/dproduct.php"
+
+    const fetch=()=>{
+    axios.request(url)
+    .then(response=> addtoarray(response.data , productList))
+    .catch(error=> alert(error));
+    }
+  
+    
+  
+    useEffect(() => {
+      fetch();
+      
+      const databaseChangeListener = () => {
+        
+        setTimeout(fetch, 0); 
+      };
+      const interval = setInterval(databaseChangeListener, 10000);
+  
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+
+
+
+
   return (
     <>
         <div className='sugg-list'>

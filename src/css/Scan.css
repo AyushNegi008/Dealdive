@@ -1,0 +1,37 @@
+.scan-body{
+    width: 100%;
+    display: flex;
+    height: 100dvh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://img.freepik.com/premium-vector/casino-slot-icon-pattern-background-website-wrapping-paper-gambling-hand-drawn-seamless-pattern_153454-5562.jpg');
+    background-size: contain;
+}
+
+#browse::file-selector-button {
+    display: none;
+  }
+  
+  #browse {
+    color: transparent;
+    width:64px;
+  }
+  
+  #browse::before {
+    content: url('https://cdn-icons-png.flaticon.com/64/8929/8929934.png');
+    /* content: url('https://cdn-icons-png.flaticon.com/128/7463/7463730.png'); */
+    
+    
+    
+  }
+  .browsebox{
+    background: #f0eff0;
+    background: #4cb17a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 109px;
+    width: 150px;
+    height: 150px;
+
+  }

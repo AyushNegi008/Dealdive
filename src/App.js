@@ -11,6 +11,7 @@ import Items from './components/Items';
 import Buynow from './components/Buynow';
 import Orders from './components/Orders';
 import Chatarea from './components/Chatarea.js';
+import Scan from './components/Scan.js';
 
 
 function App() {
@@ -50,6 +51,10 @@ function App() {
 
             <Route exact path="/chatbot">
                 <Chatarea/>
+            </Route>
+
+            <Route exact path="/scan">
+                <Scan/>
             </Route>
 
 

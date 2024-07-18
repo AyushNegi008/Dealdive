@@ -2,14 +2,37 @@
     width: 90%;
     margin-left: 5%;
 }
-
+.cahtmid{
+    padding-top: 66px;
+    padding-bottom: 66px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.chat{
+    max-width: 50%;
+    min-width: 100px;
+    min-height: 45px;
+    background: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px;
+    top: 5px;
+    border-radius: 12px;
+    margin-right: 15px;
+    padding: 10px;
+}
 .chatarea-top{
     height: 66px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
     font-size: 20px;
     width: 100%;
@@ -17,6 +40,7 @@
     padding-right: 5%;
     left: 0;
     box-shadow: 0px 2px 28px #dedede;
+    background: white;
 }
 .chatarea-bottom{
     height: 75px;
@@ -24,10 +48,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 90%;
-
+    background: white;
 }
 .back{
     width: 50px;
@@ -78,5 +102,9 @@
         padding-left: 63px;
         margin-left: -48px;
         border: 3px solid #d9b700;
+    }
+    .chat{
+        max-width: 85%;
+
     }
 }
