@@ -7,6 +7,10 @@ import Dproduct from './components/dproduct';
 import Cproduct from './components/cproduct';
 import Footer from './components/footer';
 import Product from './components/Product';
+import Items from './components/Items';
+import Buynow from './components/Buynow';
+import Orders from './components/Orders';
+import Chatarea from './components/Chatarea.js';
 
 
 function App() {
@@ -33,6 +37,22 @@ function App() {
               )
             }}
             />
+            <Route exact path="/cart">
+                <Navbar name="dealdive"/>
+                <Items/>
+                <Buynow/>
+            </Route>
+
+            <Route exact path="/orders">
+                <Navbar name="dealdive"/>
+                <Orders/>
+            </Route>
+
+            <Route exact path="/chatbot">
+                <Chatarea/>
+            </Route>
+
+
         </Switch>
     </Router>
 
