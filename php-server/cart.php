@@ -27,7 +27,7 @@ else{
 
     $str = $rarray[0];
     $strArray = explode(',', $str);
-    $numArray = array_map('intval', $strArray);
+    $numArray = array_map('strval', $strArray);
     
     $array=json_encode($numArray);
     
