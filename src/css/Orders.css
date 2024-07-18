@@ -1,0 +1,115 @@
+
+.orders-list{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+    padding-top: 30px;
+}
+.order-body{
+    background: #eeeff1;
+    height: 100%;
+    width: 100%;
+    margin-top: -70px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+.order{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background:white;
+    border-radius: 15px;
+    padding: 10px;
+}
+.order-top{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgb(239, 239, 239);
+    padding-bottom: 8px;
+
+}
+.tick{
+    height: 100%;
+    width: 63px;
+    aspect-ratio: 1;
+    background: rgb(232, 252, 238);
+    margin-right: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.tick > img{
+    width: 35%;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.o-imgs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(239, 239, 239);
+    padding-bottom: 8px;
+
+}
+.oimg{
+    width: 50px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+.gray{
+    width: 50px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 16px;
+    font-weight: 700;
+}
+.order-bottom{
+    display: flex;
+    justify-content: space-around;
+}
+.order-bottom-btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #1c9010;
+    justify-content: center;
+    font-weight: 500;
+}
+.order-bottom-btnl{
+    border-right: 1px solid rgb(239, 239, 239);
+}
+.date > p{
+    color: gray;
+    font-size: 13px;
+}
+@media only screen and (max-width: 500px){
+    
+    .tick{
+        
+        width: 47px;
+    }
+    .date > h3{
+        margin: 0;
+    }
+    
+}

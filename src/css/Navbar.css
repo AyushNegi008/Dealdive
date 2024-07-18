@@ -108,18 +108,32 @@
     border: 0;
     padding: 10px;
 }
+.carta{
+    width: 28px;
+    object-fit: contain;
+    right: 70px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .cart{
     width: 28px;
     object-fit: contain;
     
-    right:70px;
+    /* right:70px;
+    position: absolute; */
+}
+.persona{
+    width: 25px;
+    right:20px;
     position: absolute;
 }
 .person{
     width: 25px;
     object-fit: contain;
-    right:20px;
-    position: absolute;
+    /* right:20px;
+    position: absolute; */
 }
 
 
@@ -181,10 +195,15 @@
     .td{
         display: none;
     }
+    .carta{
+        right: 8px;   
+        position: absolute;
+        width: 40px;
+    }
     .cart {
         width: 40px;
-        right: 8px;
-        position: absolute;
+        /* right: 8px;
+        position: absolute; */
     }
     .ldealdive{
         display: none;
@@ -200,6 +219,9 @@
         border-radius: 50px;
         border: 0;
         padding: 10px;
+    }
+    .persona{
+        display: none;
     }
     .person{
         display: none;

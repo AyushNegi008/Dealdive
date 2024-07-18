@@ -29,8 +29,13 @@ export default function Navbar(props) {
           <div className='li'>{props.name}</div>
           <input className='input' placeholder=' 🔍    search'></input>
           <div className='p'> <p className="yellow">⚡</p> order now and get within <p className="yellow">15 min</p></div>
-          <img className="cart" src={cart}/>
-          <img className="person" src={person}/>
+          
+          <Link to="cart" className="carta">
+            <img className="cart" src={cart}/>
+          </Link>
+          <Link to="cart" className="persona">
+            <img className="person" src={person}/>
+          </Link>
         </div>
         <div className={navStatus}>
 
