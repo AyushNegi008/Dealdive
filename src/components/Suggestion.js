@@ -14,35 +14,56 @@ export default function Suggestion() {
     const [cart, setCart] = useState([]);
 
     const addtocartarray = async(response) => {
-        
         await setCart(response)
-        console.log(cart);
     }
 
     const urlcart="http://192.168.1.22/dealdive/php-server/cart.php"
-
     const fetchcart=()=>{
     axios.request(urlcart)
     .then(response=> addtocartarray(response.data , cart))
     .catch(error=> alert(error));
     }
   
-    
-  
     useEffect(() => {
       fetchcart();
       const databaseChangeListenercart = () => {
         setTimeout(fetchcart, 0); 
       };
-      const intervalcart = setInterval(databaseChangeListenercart, 10000);
+      const intervalcart = setInterval(databaseChangeListenercart, 5000);
   
       return () => {
         clearInterval(intervalcart);
       };
     }, []);
 
+    function apendtocart(pid){
+      // setCart([...cart,pid])
+      const appendurl="http://192.168.1.22/dealdive/php-server/appendtocart.php";
+        let fData= new FormData;
+        fData.append('pid', pid);
+
+        axios.post(appendurl,fData)
+        .then(response=> fetchcart())
+        .catch(error=> alert(error));
+    }
 
 
+    function popfromcart(pid){
+      // const index = cart.findIndex(item => item === pid);
+      // if (index != -1) {
+      //   const updatedCart = [...cart];
+      //   updatedCart.splice(index, 1);
+      //   setCart(updatedCart);
+      // }
+      const removeurl="http://192.168.1.22/dealdive/php-server/popfromcart.php";
+      
+        let fData= new FormData;
+        fData.append('pid', pid);
+
+        axios.post(removeurl,fData)
+        .then(response=> fetchcart())
+        .catch(error=> alert(error));
+    }
 
 
 
@@ -67,12 +88,17 @@ export default function Suggestion() {
         
         setTimeout(fetch, 0); 
       };
-      const interval = setInterval(databaseChangeListener, 10000);
+      const interval = setInterval(databaseChangeListener, 5000);
   
       return () => {
         clearInterval(interval);
       };
     }, []);
+
+
+
+
+
 
 
 
@@ -100,14 +126,14 @@ export default function Suggestion() {
                                     ?
                                     <>
                                         <div className='add-buttton' >
-                                            <div className='chevron-left'>-</div>
-                                            <div className='chevron-right'>+</div>
+                                            <div className='chevron-left' onClick={()=>{popfromcart(product.pid)}}>-</div>
+                                            <div className='chevron-right' onClick={()=>{apendtocart(product.pid)}}>+</div>
                                         </div>
                                         <p className='show'>{cart.reduce((total,x) => total+(x==product.pid), 0)}</p>
                                     </>
                                     :
                                     <>
-                                        <button className="add-buttton" id="chevron"></button> 
+                                        <button className="add-buttton" id="chevron" onClick={()=>{apendtocart(product.pid)}} ></button> 
                                         <p className='show'>+</p>
                                     </>
                                     

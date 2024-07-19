@@ -27,14 +27,15 @@ else{
 
     $str = $rarray[0];
     $strArray = explode(',', $str);
-    $numArray = array_map('strval', $strArray);
+    $numArray=array_map('intval', $strArray);
+    $srtArray = array_map('strval', $strArray);
     
-    $array=json_encode($numArray);
+    $array=json_encode($strArray);
     
     print_r($array);
     
 
 
-    $conn->close();
+    
 }
 ?>

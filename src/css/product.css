@@ -16,6 +16,7 @@
     aspect-ratio:1;
     border: 1px solid lightgray;
     border-radius: 10px;
+    object-fit: contain;
 }
 
 
