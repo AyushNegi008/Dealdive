@@ -84,7 +84,31 @@
     z-index: 1000;
 
 }
-
+.search-result-list{
+    width: 60%;
+    height: 90%;
+    left: 20%;
+    top: 10%;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    overflow-y: scroll;
+    
+}
+.search-result-list::-webkit-scrollbar{
+    width: 10px;
+}
+.search-body-max{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.search-body{
+    display: none;
+}
 .ul{
     display: flex;
     flex-direction: row;

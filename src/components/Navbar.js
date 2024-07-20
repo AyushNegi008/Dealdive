@@ -1,4 +1,10 @@
-import React ,{useState} from 'react'
+import Searchresult from './Searchresult.js';
+import ipAddress from '../static/ip.js';
+
+import React ,{useState, useEffect} from 'react';
+import axios from 'axios';
+
+
 import {BrowserRouter as Router, Switch, Route ,Link } from 'react-router-dom'; 
 import '../css/Navbar.css'
 import td from '../static/images/td.png';
@@ -17,17 +23,52 @@ import orderb from '../static/images/order-b.png';
 
 
 export default function Navbar(props) {
-  const [navStatus , setNavStatus]=useState("d-dis");
+  const [navStatus, setNavStatus] = useState("d-dis");
+  const [searchbody, setSearchbody] = useState("search-body");
+  const [inputsearch, setInputSearch] = useState("");
+  const [sresult, setSresult]=useState([])
 
+  async function changesize() {
+    if (inputsearch == "" || inputsearch == null ) {
+      console.log(inputsearch);
+      setSearchbody("search-body");
+    } else {
+      setSearchbody("");
+    }
+  }
+
+
+  const addtosresult = async(response) => {
+      await setSresult(response)
+  }
+
+  const urlsearch=`http://${ipAddress}/dealdive/php-server/search.php`
+  const resetresult=()=>{
+    let fData= new FormData;
+    fData.append('search', inputsearch);
+
+    axios.post(urlsearch,fData)
+    .then(response=> addtosresult(response.data , sresult))
+    .catch(error=> alert(error));
+    
+  }
+
+
+  useEffect(() => {
+    changesize();
+    resetresult();
+    
+    
+  }, [inputsearch]);
 
   return (
-    
+    <>
       <nav className="nav">
         <div className='ul'>
           <img className="td" src={td} onClick={()=>{navStatus=="dis"?setNavStatus("d-dis"):setNavStatus("dis")}}/>
           <img className="ldealdive" src={ldealdive}/>
           <div className='li'>{props.name}</div>
-          <input className='input' placeholder=' 🔍    search'></input>
+          <input className='input' placeholder=' 🔍    search' value={inputsearch} onChange={(e)=>{setInputSearch(e.target.value)}} ></input>
           <div className='p'> <p className="yellow">⚡</p> order now and get within <p className="yellow">15 min</p></div>
           
           <Link to="cart" className="carta">
@@ -56,9 +97,14 @@ export default function Navbar(props) {
             <img className='more-img' src={person}></img>
             <div className='more-text'>account</div>
           </Link>
-
+          
         </div>
+        
       </nav>
+      <div className={searchbody+" search-body-max"}>
+          <Searchresult result={sresult}/>
+      </div>
+      </>
     
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Discription from "./Discription.js";
 // import productList from '../static/data/products.js';
 import  '../css/product.css';
+import ipAddress from '../static/ip.js';
 
 
 
@@ -12,7 +13,17 @@ import { useState } from 'react';
 
 export default function Product(props) {
 
-    
+  // const [ipAddress, setIPAddress] = useState('')
+
+  // useEffect(() => {
+  //   fetch('https://api.ipify.org?format=json')
+  //     .then(response => response.json())
+  //     .then(data => setIPAddress(data.ip))
+  //     .catch(error => console.log(error))
+  // }, []);
+
+
+
 
     const [productList, setProductList] = useState([]);
 
@@ -20,7 +31,7 @@ export default function Product(props) {
         await setProductList(response)
     }
 
-    const url="http://192.168.1.22/dealdive/php-server/product.php"
+    const url=`http://${ipAddress}/dealdive/php-server/product.php`
 
     const fetch=()=>{
     axios.request(url)

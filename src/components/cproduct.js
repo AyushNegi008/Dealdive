@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../css/Suggestion.css';
 import '../css/dproduct.css';
 import '../css/cproduct.css';
+import ipAddress from '../static/ip.js';
 // import productList from '../static/data/products.js';
 // import cart from '../static/data/cart.js';
 
@@ -23,7 +24,7 @@ export default function Cproduct() {
         await setCart(response)
     }
 
-    const urlcart="http://192.168.1.22/dealdive/php-server/cart.php"
+    const urlcart=`http://${ipAddress}/dealdive/php-server/cart.php`
     const fetchcart=()=>{
     axios.request(urlcart)
     .then(response=> addtocartarray(response.data , cart))
@@ -44,7 +45,7 @@ export default function Cproduct() {
 
     function apendtocart(pid){
       // setCart([...cart,pid])
-      const appendurl="http://192.168.1.22/dealdive/php-server/appendtocart.php";
+      const appendurl=`http://${ipAddress}/dealdive/php-server/appendtocart.php`;
         let fData= new FormData;
         fData.append('pid', pid);
 
@@ -61,7 +62,7 @@ export default function Cproduct() {
       //   updatedCart.splice(index, 1);
       //   setCart(updatedCart);
       // }
-      const removeurl="http://192.168.1.22/dealdive/php-server/popfromcart.php";
+      const removeurl=`http://${ipAddress}/dealdive/php-server/popfromcart.php`;
       
         let fData= new FormData;
         fData.append('pid', pid);
@@ -101,7 +102,7 @@ export default function Cproduct() {
         await setProductList(response)
     }
 
-    const url="http://192.168.1.22/dealdive/php-server/cproduct.php"
+    const url=`http://${ipAddress}/dealdive/php-server/cproduct.php`
 
     const fetch=()=>{
     axios.request(url)

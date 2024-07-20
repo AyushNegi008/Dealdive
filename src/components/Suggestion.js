@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../css/Suggestion.css';
+import ipAddress from '../static/ip.js';
 // import productList from '../static/data/products.js';
 // import cart from '../static/data/cart.js';
 
@@ -11,13 +12,16 @@ import { useState } from 'react';
 
 export default function Suggestion() {
 
+
+  
     const [cart, setCart] = useState([]);
 
     const addtocartarray = async(response) => {
         await setCart(response)
     }
 
-    const urlcart="http://192.168.1.22/dealdive/php-server/cart.php"
+    const urlcart = `http://${ipAddress}/dealdive/php-server/cart.php`;
+    console.log(urlcart);
     const fetchcart=()=>{
     axios.request(urlcart)
     .then(response=> addtocartarray(response.data , cart))
@@ -38,7 +42,7 @@ export default function Suggestion() {
 
     function apendtocart(pid){
       // setCart([...cart,pid])
-      const appendurl="http://192.168.1.22/dealdive/php-server/appendtocart.php";
+      const appendurl=`http://${ipAddress}/dealdive/php-server/appendtocart.php`;
         let fData= new FormData;
         fData.append('pid', pid);
 
@@ -55,7 +59,7 @@ export default function Suggestion() {
       //   updatedCart.splice(index, 1);
       //   setCart(updatedCart);
       // }
-      const removeurl="http://192.168.1.22/dealdive/php-server/popfromcart.php";
+      const removeurl=`http://${ipAddress}/dealdive/php-server/popfromcart.php`;
       
         let fData= new FormData;
         fData.append('pid', pid);
@@ -74,7 +78,7 @@ export default function Suggestion() {
     const addtoarray = async(response) => {
         await setProductList(response)
     }
-    const url="http://192.168.1.22/dealdive/php-server/suggestion.php"
+    const url=`http://${ipAddress}/dealdive/php-server/suggestion.php`;
 
     const fetch=()=>{
     axios.request(url)

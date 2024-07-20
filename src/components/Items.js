@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/Items.css';
 // import productList from '../static/data/products.js';
-
+import ipAddress from '../static/ip.js';
 
 import axios from 'axios';
 import { useEffect } from 'react';
@@ -19,7 +19,7 @@ export default function Items() {
         await setCart(response)
     }
 
-    const urlcart="http://192.168.1.22/dealdive/php-server/cart.php"
+    const urlcart=`http://${ipAddress}/dealdive/php-server/cart.php`
     const fetchcart=()=>{
     axios.request(urlcart)
     .then(response=> addtocartarray(response.data , cart))
@@ -40,7 +40,7 @@ export default function Items() {
 
     function apendtocart(pid){
       // setCart([...cart,pid])
-      const appendurl="http://192.168.1.22/dealdive/php-server/appendtocart.php";
+      const appendurl=`http://${ipAddress}/dealdive/php-server/appendtocart.php`;
         let fData= new FormData;
         fData.append('pid', pid);
 
@@ -57,7 +57,7 @@ export default function Items() {
       //   updatedCart.splice(index, 1);
       //   setCart(updatedCart);
       // }
-      const removeurl="http://192.168.1.22/dealdive/php-server/popfromcart.php";
+      const removeurl=`http://${ipAddress}/dealdive/php-server/popfromcart.php`;
       
         let fData= new FormData;
         fData.append('pid', pid);
@@ -101,7 +101,7 @@ export default function Items() {
         await setProductList(response)
     }
 
-    const url="http://192.168.1.22/dealdive/php-server/cproduct.php"
+    const url=`http://${ipAddress}/dealdive/php-server/cproduct.php`
 
     const fetch=()=>{
     axios.request(url)
