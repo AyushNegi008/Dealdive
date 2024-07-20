@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 header('Access-Control-Allow-Origin: *');
 
-$conn = new mysqli('localhost', 'root', '', 'Dealdive');
+$conn = new mysqli('localhost', 'root', '', 'dealdive');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

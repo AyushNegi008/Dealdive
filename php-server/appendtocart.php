@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 header('Access-Control-Allow-Origin: *');
 
-$conn = new mysqli('localhost','root','','Dealdive');
+$conn = new mysqli('localhost','root','','dealdive');
 
 if(mysqli_connect_error()){
     echo mysqli_connect_error();
