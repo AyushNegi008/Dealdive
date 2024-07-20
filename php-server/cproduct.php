@@ -10,7 +10,12 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT * FROM product";
+
+$search=$_POST['search'];
+
+
+
+$sql = "SELECT * FROM product WHERE cetegeory = '$search'";
 $result = $conn->query($sql);
 
 $rarray = [];

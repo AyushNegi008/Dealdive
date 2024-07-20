@@ -12,6 +12,7 @@ import Buynow from './components/Buynow';
 import Orders from './components/Orders';
 import Chatarea from './components/Chatarea.js';
 import Scan from './components/Scan.js';
+import Login from './components/login';
 
 
 function App() {
@@ -55,6 +56,11 @@ function App() {
 
             <Route exact path="/scan">
                 <Scan/>
+            </Route>
+
+            <Route exact path="/login">
+
+              <Login/>
             </Route>
 
 

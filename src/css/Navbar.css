@@ -191,7 +191,15 @@
     .p{
         display: none;
     }
-
+    .search-result-list {
+        width: 90%;
+        height: 90%;
+        left: 5%;
+        top: 10%;
+        background: rgb(255, 255, 255);
+        position: fixed;
+        overflow-y: scroll;
+    }
 
 }
 @media only screen and (max-width: 550px) {

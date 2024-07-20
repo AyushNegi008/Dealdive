@@ -101,7 +101,7 @@ export default function Items() {
         await setProductList(response)
     }
 
-    const url=`http://${ipAddress}/dealdive/php-server/cproduct.php`
+    const url=`http://${ipAddress}/dealdive/php-server/fetch.php`
 
     const fetch=()=>{
     axios.request(url)
@@ -152,12 +152,14 @@ export default function Items() {
         }));
 
         setCartObj(result);
-        console.log(result);
+        
 
       }, [cart]);
 
 
       const findProductByPid = (products, pid) => {
+        console.log(productList)
+        
         return  products.find(product => product.pid == pid);
       };
 

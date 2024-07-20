@@ -71,10 +71,10 @@ export default function Navbar(props) {
           <input className='input' placeholder=' 🔍    search' value={inputsearch} onChange={(e)=>{setInputSearch(e.target.value)}} ></input>
           <div className='p'> <p className="yellow">⚡</p> order now and get within <p className="yellow">15 min</p></div>
           
-          <Link to="cart" className="carta">
+          <Link to="cart" onClick={()=>{setNavStatus("d-dis")}} className="carta">
             <img className="cart" src={cart}/>
           </Link>
-          <Link to="cart" className="persona">
+          <Link to="profile" onClick={()=>{setNavStatus("d-dis")}} className="persona">
             <img className="person" src={person}/>
           </Link>
         </div>

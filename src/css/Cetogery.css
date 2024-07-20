@@ -94,6 +94,7 @@ p {
     border-radius: 8px;
     margin: 20px;
     padding: 13px;
+    color: black;
 }
 
 @media only screen and (max-width: 500px) {
