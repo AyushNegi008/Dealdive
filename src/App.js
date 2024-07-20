@@ -13,6 +13,7 @@ import Orders from './components/Orders';
 import Chatarea from './components/Chatarea.js';
 import Scan from './components/Scan.js';
 import Login from './components/login';
+import Profile from './components/Profile';
 
 
 function App() {
@@ -61,6 +62,10 @@ function App() {
             <Route exact path="/login">
 
               <Login/>
+            </Route>
+            <Route exact path="/profile">
+              <Navbar name="dealdive"/>
+              <Profile/>
             </Route>
 
 

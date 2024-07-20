@@ -1,0 +1,103 @@
+/* Basic styling */
+    
+  .body-acc{
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    display: flex;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+    padding-top: 120px;
+    margin-top: -68px;
+    /* background: #f1faff;
+    background: #e5eeeb; */
+
+  }
+  .account-details, .order-history, .xp-bar {
+    background-color: #064b4e;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    width: 100%;
+    COLOR: white;
+}
+.order-history{
+    background: white;
+    color: black;
+}
+  h2 {
+    margin-top: 0;
+  }
+  .account-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  .account-details li {
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+    margin-left: 10px;
+  }
+  .account-details li div {
+    
+  }
+  .order-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .order-history th, .order-history td {
+    padding: 0.5rem;
+    border: 1px solid #ffffff;
+    text-align: left;
+  }
+  /* XP bar styling */
+  .xp-bar {
+    background-color: #ffffff;
+    height: 20px;
+  }
+  .xp-bar-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fffbfb;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .xp-bar-fill {
+    height: 100%;
+    background-color: #2ea593; /* Adjust for level color */
+    transition: width 0.5s ease;
+    width:20%;
+  }
+  .avtar{
+    vertical-align: middle;
+    margin-top: -110px;
+    width: 189px;
+  }
+  .account-details{
+    width: unset;
+    aspect-ratio: 1;
+  }
+  .account-details>h2{
+    font-family: fantasy;
+    text-wrap: nowrap;
+    margin-right: 36px;
+  }
+
+  .mid-body-acc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .account-details2{
+    width: 100%;
+    background-color: #064b4e;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    
+    COLOR: white;
+    margin-left: 15px;
+  }
