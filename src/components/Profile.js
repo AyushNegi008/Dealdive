@@ -51,14 +51,18 @@ export default function Profile(props) {
                 <h2>Notifications</h2>
             </div> */}
 
-            <div className="xp-bar">
-                <h2>XP Progress (Level 1)</h2>
-                <div className="xp-bar-container">
+        <div className="xp-bar">
+                
+                
+               
                 <div className="xp-bar-fill" ></div>
+                <div className='xp bar'>
+                    <h2>XP Progress (Level 1)</h2>
+                    <p>0/100 XP</p>
                 </div>
-                <p>0/100 XP</p>
-            </div>
+        
         </div>
 
+    </div>
     )
 }

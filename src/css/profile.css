@@ -56,6 +56,10 @@
   .xp-bar {
     background-color: #ffffff;
     height: 20px;
+    margin-top: -400px;
+    width: 800px;
+    margin-left: 400px;
+     
   }
   .xp-bar-container {
     width: 100%;
@@ -63,6 +67,7 @@
     background-color: #fffbfb;
     border-radius: 5px;
     overflow: hidden;
+    
   }
   .xp-bar-fill {
     height: 100%;
@@ -72,8 +77,8 @@
   }
   .avtar{
     vertical-align: middle;
-    margin-top: -110px;
-    width: 189px;
+    margin-top: -10px;
+    width: 149px;
   }
   .account-details{
     width: unset;
@@ -96,8 +101,9 @@
     background-color: #064b4e;
     padding: 1rem;
     border-radius: 12px;
-    margin-bottom: 1rem;
-    
-    COLOR: white;
     margin-left: 15px;
+  }
+   
+  .xp bar{
+    margin-top: 300px;
   }
