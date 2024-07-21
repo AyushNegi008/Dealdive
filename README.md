@@ -29,9 +29,9 @@ Our loyalty program rewards your continued patronage with exclusive benefits and
 
 ## php and mysql 
 
-### 1. import dealdive.sql to mysql
-### 2. start mysql/phpmyadmin server
-### 3. start apache server
+1. import dealdive.sql to mysql
+2. start mysql/phpmyadmin server
+3. start apache server
 
 
 
@@ -39,27 +39,27 @@ Our loyalty program rewards your continued patronage with exclusive benefits and
 
 ## react setup 
 
-### Steps:
+###Steps:
 
-### 1. Clone the repository:
+1. Clone the repository:
 
    bash
    git clone https://github.com/your-username/dealdive.git
    
 
-### 2. Navigate to the project directory:
+2. Navigate to the project directory:
 
    bash
    cd dealdive
    
 
-### 3. Install dependencies:
+3. Install dependencies:
 
    bash
    npm install (or yarn install)
    
 
-### 4. Start the development server:
+4. Start the development server:
 
    bash
    npm start (or yarn start)
